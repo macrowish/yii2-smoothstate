@@ -25,7 +25,7 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, simply use it in any view file by  :
 
 ```
 <?php
@@ -33,6 +33,6 @@ use macrowish\widgets\SmoothState;
 ?>
 
 <?= SmoothState::begin(); ?>
-My dynamically loaded content
+Dynamically loaded content here.
 <?= SmoothState::end(); ?>
 ```
