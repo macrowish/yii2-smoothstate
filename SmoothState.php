@@ -11,7 +11,6 @@ class SmoothState extends Widget
 
     public function init()
     {
-        $this->registerJsFile('//cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
@@ -23,6 +22,7 @@ class SmoothState extends Widget
         $options = $this->options;
         $div_id = $options['id'];
         $view = $this->getView();
+        $view->registerJsFile('//cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 
         $js = <<<JS
                 $(function() {
