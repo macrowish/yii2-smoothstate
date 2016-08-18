@@ -36,3 +36,8 @@ use macrowish\widgets\SmoothState;
 Dynamically loaded content here.
 <?php SmoothState::end(); ?>
 ```
+
+To-Do
+-----
+
+* Allow for JS Customization i.e. smoothState options, event handlers, etc.
