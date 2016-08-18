@@ -8,12 +8,14 @@ use yii\helpers\Html;
 class SmoothState extends Widget
 {
     public $options = [];
+    public $divOptions = [];
 
     public function init()
     {
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
+
         ob_start();
     }
 
@@ -25,15 +27,15 @@ class SmoothState extends Widget
         $view->registerJsFile('//cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 
         $js = <<<JS
-                $(function() {
-                  $('#$div_id').smoothState();
-                });
+        $(document).ready(function(){
+           $('#$div_id').smoothState();
+        });
 JS;
 
         $view->registerJs($js);
 
         $content = ob_get_clean();
-        $response = Html::beginTag('div', ['id'=>$options['id']]) . $content . Html::endTag('div');
+        $response = Html::beginTag('div', $options) . $content . Html::endTag('div');
         return $response;
     }
 
