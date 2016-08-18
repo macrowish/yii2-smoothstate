@@ -32,7 +32,7 @@ Once the extension is installed, simply use it in any view file by  :
 use macrowish\widgets\SmoothState;
 ?>
 
-<?= SmoothState::begin(); ?>
+<?php SmoothState::begin(); ?>
 Dynamically loaded content here.
-<?= SmoothState::end(); ?>
+<?php SmoothState::end(); ?>
 ```
