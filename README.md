@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist macrowish/yii2-smoothstate "*"
+php composer.phar require --prefer-dist macrowish/yii2-smoothstate "dev-master"
 ```
 
 or add
@@ -27,5 +27,12 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
-```php
-<?= \macrowish\AutoloadExample::widget(); ?>```
+```
+<?php
+use macrowish\widgets\SmoothState;
+?>
+
+<?= SmoothState::begin(); ?>
+My dynamically loaded content
+<?= SmoothState::end(); ?>
+```
