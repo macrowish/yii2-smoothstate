@@ -1,0 +1,21 @@
+{
+    "name": "macrowish/yii2-smoothstate",
+    "description": "Unobtrusive page transitions for Yii2: http://smoothstate.com/",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","smoothstate","loading","widget"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Macrowish",
+            "email": "contact@macrowish.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "macrowish\\": ""
+        }
+    }
+}
