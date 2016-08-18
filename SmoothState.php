@@ -30,7 +30,7 @@ class SmoothState extends Widget
                 });
 JS;
 
-        $view->registerJs($js, ['depends' => [\yii\web\JqueryAsset::className()]]);
+        $view->registerJs($js);
 
         $content = ob_get_clean();
         $response = Html::beginTag('div', ['id'=>$options['id']]) . $content . Html::endTag('div');
