@@ -9,6 +9,7 @@ class SmoothState extends Widget
 {
     public $options = [];
     public $divOptions = [];
+    public $callback = false;
 
     public function init()
     {
@@ -28,7 +29,7 @@ class SmoothState extends Widget
 
         $js = <<<JS
         $(document).ready(function(){
-           $('#$div_id').smoothState();
+           $('#$div_id').smoothState($this->callback);
         });
 JS;
 
